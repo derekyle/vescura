@@ -2,7 +2,7 @@
   "name": "vescura",
   "displayName": "Vescura – Sync .env to GitHub Secrets & GitLab CI/CD",
   "description": "Sync .env files to GitHub Secrets and GitLab CI/CD Variables without leaving VS Code. Push environment variables as secrets or plain values, pull remote secrets into local .env files, and control each variable inline with CodeLens.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "Provided license",
   "publisher": "ArseniyDev",
   "icon": "media/icon.png",
@@ -35,7 +35,16 @@
     "env file"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onView:vescura.panel",
+    "onCommand:vescura.push",
+    "onCommand:vescura.pushMapping",
+    "onCommand:vescura.pull",
+    "onCommand:vescura.addMapping",
+    "onCommand:vescura.deleteMapping",
+    "onCommand:vescura.manageTokens",
+    "onCommand:vescura.toggleEnabled",
+    "onCommand:vescura.toggleType"
   ],
   "main": "./dist/extension.js",
   "repository": {
